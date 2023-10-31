@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { presets: ["next/babel"] };
+const nextConfig = {};
 
 module.exports = nextConfig;

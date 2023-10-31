@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
+import React from "react";
 
 const Dashboard = () => {
   return (
     <main>
       <Navbar isDashboardPage={true} isProdukPage={false} isAdminPage={false} />
+
       <div className="flex min-h-screen min-W-screen flex-col items-center p-24 bg-[#f4f9fb]">
         <div className="flex ml-[200px] 2xl:ml-[260px] mr-[10px] my-[15px]">
           <div className="bg-white w-[604px] 2xl:w-[1114px] h-[224px] 2xl:h-[416px] mx-[10px] flex shadow-xl">
