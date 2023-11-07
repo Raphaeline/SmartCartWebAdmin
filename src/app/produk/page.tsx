@@ -74,7 +74,23 @@ const Produk = () => {
         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
           <img src="/produk/searchIcon.svg" alt="Search Icon" className="w-4 h-4" />
         </span>
-        <input type="text" id="searchInput" placeholder="Cari produk (nama/UPC/SKU)" className="font-poppins font-[15px] text-[#98A2A5] w-[270px] 2xl:w-[583px] h-[32px] 2xl:h-[48px] pl-10 rounded border border-[#98A2A5]" />
+        <input type="text" id="searchInput" placeholder="Cari produk (nama/UPC/SKU)" className="font-poppins font-[15px] text-[#98A2A5] w-[310px] 2xl:w-[583px] h-[32px] 2xl:h-[48px] pl-10 rounded border border-[#98A2A5]" />
+      </div>
+
+      <div className="fixed right-10">
+        <span className="absolute inset-y-0 left-0 flex items-center pl-3 pr-2">
+          <img src="/produk/filter.svg" alt="Filter Icon" className="w-4 h-4" />
+          {/* <label htmlFor="filter" className="text-[#243956] px-1">
+            Filter
+          </label> */}
+        </span>
+        <select id="filter" name="filter" className="font-poppins text-[15px] text-[#243956] w-[135px] 2xl:w-[583px] h-[32px] 2xl:h-[48px]  pl-10 rounded border border-[#D4E3E8]">
+          <option value="produk">Produk</option>
+          <option value="kategori">Kategori</option>
+          <option value="UPC">UPC</option>
+          <option value="SKU">SKU</option>
+          <option value="Harga">Harga</option>
+        </select>
       </div>
 
       <div className="fixed left-64 mx-10 mt-16">

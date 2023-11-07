@@ -16,7 +16,7 @@ const Home = () => {
           <img src="/Logo1.svg" alt="My Image" />
         </div>
         <div className="m-[10px] flex flex-col ">
-          <p className="text-[#0D6D8C] text-[20px] font-jakarta font-semibold tracking-[5.6px]">TuBi</p>
+          <p className="text-[#0D6D8C] text-[27px] font-jakarta font-semibold tracking-[5.6px]">TuBi</p>
           <p className="text-[#0D6D8C] text-[30px] font-jakarta font-semibold whitespace-nowrap overflow-hidden">Manajer Toko</p>
         </div>
       </div>
@@ -30,7 +30,7 @@ const Home = () => {
             type={showPassword ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="font-poppins text-[#0D6D8C] w-[349px] h-[45px] bg-#E4F2F6 font-[500] border-2 border-[#E4F2F6] rounded-xl px-[5px]"
+            className="font-poppins text-[#0D6D8C] w-[349px] h-[45px] bg-#E4F2F6 font-[500] border-2 border-[#E4F2F6] active:border-[#40B6DD]  rounded-xl px-[5px]"
           />
           <img src={showPassword ? "/loginPage/eyeClose.svg" : "/loginPage/eyeOpen.svg"} alt="Toggle Password Visibility" className="absolute right-4 top-3 cursor-pointer w-[21px]" onClick={togglePasswordVisibility} />
         </div>
