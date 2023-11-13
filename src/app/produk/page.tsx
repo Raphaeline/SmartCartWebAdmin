@@ -66,7 +66,7 @@ const Produk = () => {
         <a href="#" className="bg-[#55A3BD] hover:bg-[#5495a2] py-[9px] 2xl:py-[12px] px-[22px] 2xl:px-[30px] rounded-md font-poppins text-[14px] 2xl:text-[16px] drop-shadow hover:drop-shadow-md shadow-md mr-4">
           Buat Kategori
         </a>
-        <a href="#" className="bg-[#25B6D0] hover:bg-[#64abba] py-[9px] 2xl:py-[12px] px-[22px] 2xl:px-[30px] rounded-md font-poppins text-[14px] 2xl:text-[16px] drop-shadow hover:drop-shadow-md hover:shadow-lg ml-4">
+        <a href="/produk/tambahProduk" className="bg-[#25B6D0] hover:bg-[#64abba] py-[9px] 2xl:py-[12px] px-[22px] 2xl:px-[30px] rounded-md font-poppins text-[14px] 2xl:text-[16px] drop-shadow hover:drop-shadow-md hover:shadow-lg ml-4">
           Tambah Produk
         </a>
       </div>
@@ -78,13 +78,8 @@ const Produk = () => {
       </div>
 
       <div className="fixed right-10">
-        <span className="absolute inset-y-0 left-0 flex items-center pl-3 pr-2">
-          <img src="/produk/filter.svg" alt="Filter Icon" className="w-4 h-4" />
-          {/* <label htmlFor="filter" className="text-[#243956] px-1">
-            Filter
-          </label> */}
-        </span>
-        <select id="filter" name="filter" className="font-poppins text-[15px] text-[#243956] w-[135px] 2xl:w-[583px] h-[32px] 2xl:h-[48px]  pl-10 rounded border border-[#D4E3E8]">
+        <span className="absolute inset-y-0 left-0 flex items-center pl-3 pr-2"></span>
+        <select id="filter" name="filter" className="font-poppins text-[15px] text-[#243956] w-[135px] 2xl:w-[165px] h-[32px] 2xl:h-[48px]  pl-10 rounded border border-[#D4E3E8]">
           <option value="produk">Produk</option>
           <option value="kategori">Kategori</option>
           <option value="UPC">UPC</option>
@@ -93,18 +88,18 @@ const Produk = () => {
         </select>
       </div>
 
-      <div className="fixed left-64 mx-10 mt-16">
+      <div className="fixed left-64 ml-10 mt-16">
         <table>
           <thead className="bg-[#E4F2F6]">
             <tr>
               <th className="border border-[#D4E3E8] py-[15px] px-[20px]">
                 <input type="checkbox" checked={allChecked} onChange={handleMainCheckbox}></input>
               </th>
-              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[300px] max-w-[300px]">Produk</th>
-              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px]">Kategori</th>
-              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px]">UPC</th>
-              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px]">SKU</th>
-              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px]">Harga</th>
+              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[300px] max-w-[300px] 2xl:w-[595px] 2xl:max-w-[595px]">Produk</th>
+              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px] 2xl:w-[260px] 2xl:max-w-[260px]">Kategori</th>
+              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px] 2xl:w-[225px] 2xl:max-w-[225px]">UPC</th>
+              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px] 2xl:w-[225px] 2xl:max-w-[225px]">SKU</th>
+              <th className="border border-[#D4E3E8] text-black py-[15px] px-[5px] font-poppins text-[16px] w-[150px] max-w-[150px] 2xl:w-[225px] 2xl:max-w-[225px]">Harga</th>
             </tr>
           </thead>
           <tbody>
@@ -113,15 +108,14 @@ const Produk = () => {
                 <th className="border-y border-y-[#E0E0E0] py-[15px] px-[20px]">
                   <input type="checkbox" checked={individualChecks[index]} onChange={handleIndividualCheckbox(index)}></input>
                 </th>
-                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] w-[300px] max-w-[300px] flex items-center">
-                  <img src="/dummy/citra.svg" className="w-[45px]" />
+                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] 2xl:text-[16px] w-[300px] max-w-[300px] 2xl:w-[595px] 2xl:max-w-[595px] flex items-center">
+                  <img src="/dummy/citra.svg" className="w-[45px] 2xl:w-[85px]" />
                   <p className="ml-3">Sabun Citra - Bengkoang Natural Glow</p>
                 </td>
-
-                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] w-[150px] max-w-[150px] text-center">Perawatan</td>
-                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] w-[150px] max-w-[150px] text-center">8999999533731</td>
-                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] w-[150px] max-w-[150px] text-center">S533731</td>
-                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] w-[150px] max-w-[150px] text-center">Rp 3.500,00</td>
+                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] 2xl:text-[16px] w-[150px] max-w-[150px] 2xl:w-[260px] 2xl:max-w-[260px] text-center">Perawatan</td>
+                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] 2xl:text-[16px] w-[150px] max-w-[150px] 2xl:w-[225px] 2xl:max-w-[225px] text-center">8999999533731</td>
+                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] 2xl:text-[16px] w-[150px] max-w-[150px] 2xl:w-[225px] 2xl:max-w-[225px] text-center">S533731</td>
+                <td className="border-y border-y-[#E0E0E0] text-black py-[15px] px-[30px] font-poppins text-[12px] 2xl:text-[16px] w-[150px] max-w-[150px] 2xl:w-[225px] 2xl:max-w-[225px] text-center">Rp 3.500,00</td>
               </tr>
             ))}
           </tbody>
